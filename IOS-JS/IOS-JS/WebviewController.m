@@ -8,18 +8,15 @@
 
 #import "WebviewController.h"
 #import <JavaScriptCore/JavaScriptCore.h>
+#import "JSContextDelegate.h"
 
-@protocol JSExportInteraction <JSExport>
 
-- (void)callCamera;
 
-@end
-
-@interface WebviewController ()<UIWebViewDelegate,JSExportInteraction>
+@interface WebviewController ()<UIWebViewDelegate>
 
 @property (nonatomic,weak)UIWebView *webView;
 
-@property (nonatomic,strong)JSContext *jsContext;
+@property (nonatomic,weak)JSContextDelegate *delegateObject;
 
 @end
 
@@ -40,8 +37,6 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-
-    // Do any additional setup after loading the view.
     [self setupUI];
 }
 
@@ -61,12 +56,12 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     
     //第一步获取当前的JS 环境
-    
     JSContext *jsContext = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-    jsContext[@"Interaction"] = self;
     
-    self.jsContext = jsContext;
-    
+    //之所以用[JSContextDelegate Class] 是因为内存泄漏,这样完美的解决内存泄漏
+    jsContext[@"Interaction"] = [JSContextDelegate class];
+    JSContextDelegate.jsContext = jsContext;
+
     jsContext.exceptionHandler = ^(JSContext *context, JSValue *exception) {
         context.exception = exception;
         
@@ -76,18 +71,12 @@
 }
 
 
-/**
- JS 调用原生的方法
- */
-- (void)callCamera {
-    
-    NSLog(@"调用摄像头");
-    //这里是得到JS 方法
-    JSValue *picCallBack = self.jsContext[@"picCallback"];
-    
-    //这里是调用JS 方法,给JS 传入参数
-    [picCallBack callWithArguments:@[@"I love you"]];
-    
+
+
+- (void)dealloc
+{
+    NSLog(@"%@",NSStringFromClass([self class]));
+
 }
 
 @end

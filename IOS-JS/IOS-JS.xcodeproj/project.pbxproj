@@ -15,6 +15,8 @@
 		7AB274042231F26400588193 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB274032231F26400588193 /* main.m */; };
 		7AB2740C2231F50D00588193 /* WebviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB2740B2231F50D00588193 /* WebviewController.m */; };
 		7AB2740E2231F6B100588193 /* jsDemo.html in Resources */ = {isa = PBXBuildFile; fileRef = 7AB2740D2231F6B100588193 /* jsDemo.html */; };
+		7AB274192232469500588193 /* JSContextDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB274182232469500588193 /* JSContextDelegate.m */; };
+		7AB2741C2232545700588193 /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB2741B2232545700588193 /* WKWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,10 @@
 		7AB2740A2231F50D00588193 /* WebviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebviewController.h; sourceTree = "<group>"; };
 		7AB2740B2231F50D00588193 /* WebviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebviewController.m; sourceTree = "<group>"; };
 		7AB2740D2231F6B100588193 /* jsDemo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jsDemo.html; sourceTree = "<group>"; };
+		7AB274172232469500588193 /* JSContextDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSContextDelegate.h; sourceTree = "<group>"; };
+		7AB274182232469500588193 /* JSContextDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSContextDelegate.m; sourceTree = "<group>"; };
+		7AB2741A2232545700588193 /* WKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
+		7AB2741B2232545700588193 /* WKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,10 @@
 				7AB273F82231F26200588193 /* ViewController.m */,
 				7AB2740A2231F50D00588193 /* WebviewController.h */,
 				7AB2740B2231F50D00588193 /* WebviewController.m */,
+				7AB2741A2232545700588193 /* WKWebViewController.h */,
+				7AB2741B2232545700588193 /* WKWebViewController.m */,
+				7AB274172232469500588193 /* JSContextDelegate.h */,
+				7AB274182232469500588193 /* JSContextDelegate.m */,
 				7AB273FA2231F26200588193 /* Main.storyboard */,
 				7AB273FD2231F26400588193 /* Assets.xcassets */,
 				7AB273FF2231F26400588193 /* LaunchScreen.storyboard */,
@@ -152,8 +162,10 @@
 			files = (
 				7AB273F92231F26200588193 /* ViewController.m in Sources */,
 				7AB274042231F26400588193 /* main.m in Sources */,
+				7AB274192232469500588193 /* JSContextDelegate.m in Sources */,
 				7AB273F62231F26200588193 /* AppDelegate.m in Sources */,
 				7AB2740C2231F50D00588193 /* WebviewController.m in Sources */,
+				7AB2741C2232545700588193 /* WKWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
