@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "WebviewController.h"
 
 @interface ViewController ()
+
+
 
 @end
 
@@ -16,8 +19,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+   
+    
+    
 }
+- (IBAction)actionBtn:(UIButton *)sender {
+    
+    WebviewController *vc = [WebviewController new];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+
 
 
 @end

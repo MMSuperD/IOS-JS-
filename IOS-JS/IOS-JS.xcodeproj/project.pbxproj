@@ -13,6 +13,8 @@
 		7AB273FE2231F26400588193 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AB273FD2231F26400588193 /* Assets.xcassets */; };
 		7AB274012231F26400588193 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AB273FF2231F26400588193 /* LaunchScreen.storyboard */; };
 		7AB274042231F26400588193 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB274032231F26400588193 /* main.m */; };
+		7AB2740C2231F50D00588193 /* WebviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB2740B2231F50D00588193 /* WebviewController.m */; };
+		7AB2740E2231F6B100588193 /* jsDemo.html in Resources */ = {isa = PBXBuildFile; fileRef = 7AB2740D2231F6B100588193 /* jsDemo.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		7AB274002231F26400588193 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AB274022231F26400588193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AB274032231F26400588193 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7AB2740A2231F50D00588193 /* WebviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebviewController.h; sourceTree = "<group>"; };
+		7AB2740B2231F50D00588193 /* WebviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebviewController.m; sourceTree = "<group>"; };
+		7AB2740D2231F6B100588193 /* jsDemo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jsDemo.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +63,13 @@
 		7AB273F32231F26200588193 /* IOS-JS */ = {
 			isa = PBXGroup;
 			children = (
+				7AB2740D2231F6B100588193 /* jsDemo.html */,
 				7AB273F42231F26200588193 /* AppDelegate.h */,
 				7AB273F52231F26200588193 /* AppDelegate.m */,
 				7AB273F72231F26200588193 /* ViewController.h */,
 				7AB273F82231F26200588193 /* ViewController.m */,
+				7AB2740A2231F50D00588193 /* WebviewController.h */,
+				7AB2740B2231F50D00588193 /* WebviewController.m */,
 				7AB273FA2231F26200588193 /* Main.storyboard */,
 				7AB273FD2231F26400588193 /* Assets.xcassets */,
 				7AB273FF2231F26400588193 /* LaunchScreen.storyboard */,
@@ -128,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AB2740E2231F6B100588193 /* jsDemo.html in Resources */,
 				7AB274012231F26400588193 /* LaunchScreen.storyboard in Resources */,
 				7AB273FE2231F26400588193 /* Assets.xcassets in Resources */,
 				7AB273FC2231F26200588193 /* Main.storyboard in Resources */,
@@ -144,6 +153,7 @@
 				7AB273F92231F26200588193 /* ViewController.m in Sources */,
 				7AB274042231F26400588193 /* main.m in Sources */,
 				7AB273F62231F26200588193 /* AppDelegate.m in Sources */,
+				7AB2740C2231F50D00588193 /* WebviewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
