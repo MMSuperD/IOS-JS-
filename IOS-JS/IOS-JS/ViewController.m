@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "WebviewController.h"
+#import "WKWebViewController.h"
 
 @interface ViewController ()
 
@@ -30,6 +31,10 @@
 }
 
 - (IBAction)actionWkWebViewBtn:(UIButton *)sender {
+    
+    WKWebViewController *vc = [WKWebViewController new];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
