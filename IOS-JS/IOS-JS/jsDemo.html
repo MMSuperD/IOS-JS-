@@ -23,8 +23,16 @@ var picCallback = function(photos) {
 alert(photos);
 }
 
-var shareCallback = function(){
+var shareCallback = function(shareInfo,hhString){
 alert('very nice');
+alert(shareInfo)
+//这里是字符串转 字典
+var shareInfoDict = JSON.parse(shareInfo)
+alert(shareInfoDict)
+//这里是取字典中的某个值
+alert(shareInfoDict.shareUrl)
+
+alert(hhString)
 }
 </script>
 </body>

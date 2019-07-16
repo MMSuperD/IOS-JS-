@@ -43,8 +43,18 @@ static JSContext *_jsContext;
     //这里是子线程
     NSLog(@"%@",shareInfo);
     NSLog(@"%@",[NSThread currentThread]);
+    
+    NSData *jsonData = [shareInfo dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&err];
+    
+    if (!err) {
+        NSLog(@"%@",dic);
+    }
+   
     JSValue *shareCallBack = _jsContext[@"shareCallback"];
-    [shareCallBack callWithArguments:nil];
+//    [shareCallBack callWithArguments:nil];
+    [shareCallBack callWithArguments:@[shareInfo,@"哈哈哈"]];
     
     NSLog(@"%@",[NSThread currentThread]);
 }

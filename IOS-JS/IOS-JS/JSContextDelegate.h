@@ -13,7 +13,7 @@
 
 + (void)callCamera;
 
-+ (void)share:(NSString *)shareInfo;
++ (void)share:(NSString *_Nullable)shareInfo;
 
 @end
 
